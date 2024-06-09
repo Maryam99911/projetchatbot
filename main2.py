@@ -95,7 +95,7 @@ def bag_of_words(s, words):
 
 # Chatting function
 def chat():
-    print("Start talking with the bot (type quit to stop)!")
+    print("Commencez à discuter avec le bot (tapez 'quitter' pour faire une pause café)!")
     while True:
         inp = input("You: ")
         if inp.lower() == "quit":
@@ -111,6 +111,6 @@ def chat():
                     responses = tg['responses']
             print(random.choice(responses))
         else:
-            print("I didn't understand that, try again.")
+            print("Je n'ai pas compris, essayez encore une fois avec une touche de magie !")
 
 chat()
