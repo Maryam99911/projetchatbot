@@ -19,11 +19,11 @@ for value in contexts_dict.values():
 #print(contexts)
 
 '''contexts = [
-    "Paris is the capital of France. It is known for its art, gastronomy, and culture.",
-    "A cake is made from flour, sugar, eggs, and butter. It is often baked and can be of various flavors.",
-    "The blue whale is the largest mammal on Earth. It can weigh up to 200 tons and be as long as 100 feet.",
-    "Photosynthesis is the process by which green plants use sunlight to synthesize foods with the help of chlorophyll.",
-    "The speed of light in a vacuum is approximately 299,792 kilometers per second.",
+    "Le Mont Everest est le plus haut sommet du monde, culminant à 8 848 mètres.",
+    "La pizza est un plat italien populaire composé d'une pâte garnie de sauce tomate, de fromage et divers autres ingrédients.",
+    "Les girafes sont connues pour leur long cou, qui leur permet d'atteindre les feuilles des arbres les plus hauts.",
+    "La gravité est la force qui attire les objets vers le centre de la Terre.",
+    "Le système solaire comprend huit planètes qui orbitent autour du Soleil.",
     "entre 2019 et 2020, il y avait 600 dossiers déposés. En 2019, il y avait 170 dossiers déposés, 147 dossiers acceptés, avec un budget de 52693 euros et une aide moyenne de 358.455782313 euros. et En 2020, il y avait 430 dossiers déposés, 407 dossiers acceptés, avec un budget de 137656 euros et une aide moyenne de 338.221130221 euros. et En 2021, il y avait 92 dossiers déposés, 82 dossiers acceptés,avec un budget de 31301 euros et une aide moyenne de 381.719512195 euros."
 ]'''
 
@@ -65,7 +65,7 @@ def main():
 
         response = {
             "input": input_text,
-            "response": result if result else "Désolé, je ne peux pas répondre à cette question pour le moment.",
+            "response": result if result else "Oups, je ne peux pas répondre à cette question pour l'instant. Essayez plus tard !",
             "context": meilleur_contexte
         }
 
