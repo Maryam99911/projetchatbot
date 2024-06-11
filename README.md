@@ -1,4 +1,4 @@
-# projetchatbot
+# Projet Chatbot Sacl-AI
 
 # Description
 Ce chatbot est conçu pour engager des conversations avec les utilisateurs et fournir des réponses basées sur des motifs et des intentions prédéfinis. Il utilise un modèle de réseau neuronal entraîné sur un ensemble de données d'intentions pour comprendre les entrées utilisateur et générer des réponses appropriées.
