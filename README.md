@@ -27,6 +27,7 @@ pip install nltk tensorflow numpy pymongo
 - `data1.json` : Fichier JSON contenant les données de conversation (intentions et réponses).
 - `chatbot_model.h5` : Modèle de réseau neuronal entraîné pour la classification des intentions.
 - `data.pickle` : Fichier picklé contenant les données prétraitées (mots, libellés, données d'entraînement, données de sortie).
+- `main2.py` : L'implémentation du modèle.
 
 #### Architecture du Modèle
 L'architecture du modèle de chatbot se compose d'un réseau neuronal à propagation avant avec trois couches denses. La couche d'entrée prend la représentation bag-of-words de l'entrée utilisateur, et les couches suivantes consistent en des couches denses (entièrement connectées) avec des fonctions d'activation ReLU. La couche de sortie utilise une activation softmax pour la classification multi-classes.
