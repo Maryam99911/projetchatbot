@@ -26,7 +26,7 @@ pip install nltk tensorflow numpy pymongo
 #### Fichiers
 - `data1.json` : Fichier JSON contenant les données de conversation (intentions et réponses).
 - `chatbot_model.h5` : Modèle de réseau neuronal entraîné pour la classification des intentions.
-- `data.pickle` : Fichier picklé contenant les données prétraitées (mots, libellés, données d'entraînement, données de sortie).
+- `data.pickle` : Fichier picklé contenant les données prétraitées (mots, libellés, données d'entraînement, données de sortie). Il est généré automatiquement après exécution du modèle.
 - `main2.py` : L'implémentation du modèle.
 
 #### Architecture du Modèle
