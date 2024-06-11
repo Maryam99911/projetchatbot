@@ -43,3 +43,7 @@ Après un entrainement avec 1000 epochs et une taille de lot de 5. Le modèle af
 - Exactitude (accuracy) : Le modèle a atteint une précision de 93,43 % (accuracy : 0.9343) sur les données d'entraînement, indiquant qu'il prédit correctement l'intention de l'utilisateur dans une grande proportion des cas.
 
 - Perte (loss) : La valeur de perte (loss) obtenue est de 9.6239e-04, ce qui indique une faible erreur moyenne entre les prédictions du modèle et les valeurs réelles.
+
+# Spécifcations sur la construction du fichier JSON d'entraînement
+
+
