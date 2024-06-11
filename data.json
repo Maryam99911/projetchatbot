@@ -58,11 +58,11 @@
             "En 2021, le budget total des aides était de 31301 euros avec une aide moyenne de 381.72 euros."
           ]
         }, {"tag": "aidestotal20192020",
-           "patterns": ["Quelles sont les aides financières disponibles entre 2019 et 2021 ?",
+           "patterns": ["Quelles étaient les aides financières disponibles entre 2019 et 2021 ?",
                   "Aides financières disponibles entre 2019 et 2021 ?",
                   "Quels types d'aides financières étaient disponibles entre 2019 et 2021 ?"
               ],
-           "responses": ["Entre 2019 et 2021, les aides financières disponibles étaient : en 2019, il y avait 170 dossiers déposés, 147 dossiers acceptés, avec un budget de 52693 euros et une aide moyenne de 358.455782313 euros. En 2020, il y avait 430 dossiers déposés, 407 dossiers acceptés, avec un budget de 137656 euros et une aide moyenne de 338.221130221 euros. En 2021, il y avait 92 dossiers déposés, 82 dossiers acceptés, avec un budget de 31301 euros et une aide moyenne de 381.719512195 euros."
+           "responses": ["Entre 2019 et 2021, les aides financières disponibles étaient : en 2019, une aide moyenne de 338.221130221 euros. En 2021, une aide moyenne de 381.719512195 euros."
               ]
                 },{
   "tag": "associationInfoEvry",
