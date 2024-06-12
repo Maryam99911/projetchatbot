@@ -49,8 +49,10 @@ Après un entrainement avec 1000 epochs et une taille de lot de 5. Le modèle af
 - Génération de questions et réponses : On utilise des modèles de la bibliothèque transformers pour générer des questions et réponses à partir des contextes.
 
   
-    **pipe_question** = pipeline("text2text-generation", model="lincoln/barthez-squadFR-fquad-piaf-question-generation")
-    **qa_pipeline** = pipeline("question-answering", model="TARUNBHATT/flan-t5-small-finetuned-squad")
+     - **pipe_question** = pipeline("text2text-generation", model="lincoln/barthez-squadFR-fquad-piaf-question-generation")
+
+
+     - **qa_pipeline** = pipeline("question-answering", model="TARUNBHATT/flan-t5-small-finetuned-squad")
 - Cryptage et Sauvegarde dans MongoDB : Après génération d'une paire de clés RSA, on les utilise pour crypter le jeu de données en utilisant AES et la clé AES qui est chiffrée avec RSA, puis stocker les données cryptées avec la clé de cryptage et le vecteur d'initialisation (IV) dans une collection MongoDB qu'on utilisera à chaque fois qu'on souhaite entraîner notre modèle. Cela assure que les informations sensibles sont stockées en toute sécurité et ne peuvent être accessibles que par quelqu'un possédant la clé de déchiffrement correcte.
 
 # Déchiffrement des Données 
