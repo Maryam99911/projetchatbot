@@ -45,5 +45,14 @@ Après un entrainement avec 1000 epochs et une taille de lot de 5. Le modèle af
 - Perte (loss) : La valeur de perte (loss) obtenue est de 9.6239e-04, ce qui indique une faible erreur moyenne entre les prédictions du modèle et les valeurs réelles.
 
 # Spécifcations sur la construction du fichier JSON d'entraînement
+- Construction des contextes de questions et de réponses : Les fonctions construire_contextes_[....]_questions et construire_contextes_[....]_reponses transforment les documents MongoDB en contextes textuels.
+- Génération de questions et réponses : On utilise des modèles de la bibliothèque transformers pour générer des questions et réponses à partir des contextes.
+    **pipe_question** = pipeline("text2text-generation", model="lincoln/barthez-squadFR-fquad-piaf-question-generation")
+    **qa_pipeline** = pipeline("question-answering", model="TARUNBHATT/flan-t5-small-finetuned-squad")
+- Cryptage et Sauvegarde dans MongoDB : Après génération d'une paire de clés RSA, on les utilise pour crypter le jeu de données en utilisant AES et la clé AES qui est chiffrée avec RSA, puis stocker les données cryptées avec la clé de cryptage et le vecteur d'initialisation (IV) dans une collection MongoDB qu'on utilisera à chaque fois qu'on souhaite entraîner notre modèle. Cela assure que les informations sensibles sont stockées en toute sécurité et ne peuvent être accessibles que par quelqu'un possédant la clé de déchiffrement correcte.
 
-
+# Déchiffrement des Données Chiffrées
+- Connexion à MongoDB : Le script se connecte à MongoDB pour récupérer les données chiffrées à partir de la collection chiffrée.
+- Chargement de la Clé Privée : On charge la clé privée à partir d'un fichier PEM.
+- Déchiffrement des Données : La fcontion decrypt permet de déchiffrer les données. Elle utilise la clé privée pour déchiffrer la clé AES et l'IV, puis utilise ces informations pour déchiffrer les données JSON.
+- Utilisation des Données pour l'Entraînement du Modèle de Chatbot.
