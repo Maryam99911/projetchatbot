@@ -16,7 +16,7 @@ stored_data = collection.find_one()
 #print(os.getcwd())
 # Fonction pour charger la clé privée à partir d'un fichier
 def get_private_key():
-    with open("C:/Users/Khady/PycharmProjects/chatbotAI/GenerationDatasets/private_key.pem", "rb") as key_file:
+    with open("dataset_generation/private_key.pem", "rb") as key_file:
         private_key = serialization.load_pem_private_key(
             key_file.read(),
             password=None,
