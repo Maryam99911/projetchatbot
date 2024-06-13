@@ -12,7 +12,7 @@ from tensorflow.keras.optimizers import Adam
 stemmer = LancasterStemmer()
 
 # Load the intents file
-with open("data.json", encoding='utf-8') as file:
+with open("fichierfinal.json", encoding='utf-8') as file:
     data = json.load(file)
 
 try:
@@ -109,7 +109,7 @@ def chat():
         results_index = np.argmax(results)
         tag = labels[results_index]
 
-        if results[results_index] > 0.5:
+        if results[results_index] > 0.7:
             for tg in data["intents"]:
                 if tg['tag'] == tag:
                     responses = tg['responses']
