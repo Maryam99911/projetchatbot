@@ -16,6 +16,27 @@
          "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
          "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
         },
+        {
+          "tag": "salutation",
+          "patterns": ["Salut", "Comment ça va", "Y a-t-il quelqu'un?", "Bonjour", "Bonne journée"],
+          "responses": ["Bonjour, merci de votre visite", "Content de vous revoir", "Salut, comment puis-je vous aider?"],
+          "context_set": ""
+      },
+      {
+          "tag": "au_revoir",
+          "patterns": ["Au revoir", "À plus tard", "Adieu"],
+          "responses": ["À plus tard, merci de votre visite", "Bonne journée", "Au revoir! Revenez bientôt."]
+      },
+      {
+          "tag": "merci",
+          "patterns": ["Merci", "Merci beaucoup", "C'est utile"],
+          "responses": ["Heureux d'aider!", "À tout moment!", "Avec plaisir"]
+      },
+      {
+          "tag": "horaires",
+          "patterns": ["Quels sont vos horaires d'ouverture?", "Quels sont vos horaires?", "Quand êtes-vous ouverts?"],
+          "responses": ["Nous sommes ouverts de 8h00 à 19h45, du lundi au vendredi", "Nos horaires sont de 8h00 à 19h45, du lundi au vendredi"]
+      },
         {"tag": "depose2019",
          "patterns": [ "Combien de dossiers ont été déposés en 2019 ?",
                 "Nombre de dossiers déposés en 2019 ?",
@@ -31,13 +52,1016 @@
                 "Nombre de dossiers déposés en 2021 ?",
                 "Dossiers déposés en 2021 ?"],
          "responses": ["En 2021, il y avait 92 dossiers déposés."]
-        },{"tag": "aidestotal20192020",
-         "patterns": ["Quelles sont les aides financières disponibles entre 2019 et 2021 ?",
-                "Aides financières disponibles entre 2019 et 2021 ?",
-                "Quels types d'aides financières étaient disponibles entre 2019 et 2021 ?"
-            ],
-         "responses": ["Entre 2019 et 2021, les aides financières disponibles étaient : en 2019, il y avait 170 dossiers déposés, 147 dossiers acceptés, avec un budget de 52693 euros et une aide moyenne de 358.455782313 euros. En 2020, il y avait 430 dossiers déposés, 407 dossiers acceptés, avec un budget de 137656 euros et une aide moyenne de 338.221130221 euros. En 2021, il y avait 92 dossiers déposés, 82 dossiers acceptés, avec un budget de 31301 euros et une aide moyenne de 381.719512195 euros."
-            ]
-        }
-   ]
+                }, {"tag": "aide2019",
+          "patterns": [
+            "Quel est le montant total des aides en 2019 ?",
+            "Budget total des aides en 2019 ?",
+            "Combien d'aide a été attribuée en 2019 ?"
+          ],
+          "responses": [
+            "En 2019, le budget total des aides était de 52693 euros avec une aide moyenne de 358.46 euros."
+          ]
+        }, {"tag": "aide2020",
+          "patterns": [
+            "Quel est le montant total des aides en 2020 ?",
+            "Budget total des aides en 2020 ?",
+            "Combien d'aide a été attribuée en 2020 ?"
+          ],
+          "responses": [
+            "En 2020, le budget total des aides était de 137656 euros avec une aide moyenne de 338.22 euros."
+          ]
+        }, {"tag": "aide2021",
+          "patterns": [
+            "Quel est le montant total des aides en 2021 ?",
+            "Budget total des aides en 2021 ?",
+            "Combien d'aide a été attribuée en 2021 ?"
+          ],
+          "responses": [
+            "En 2021, le budget total des aides était de 31301 euros avec une aide moyenne de 381.72 euros."
+          ]
+        }, {"tag": "aidestotal20192020",
+           "patterns": ["Quelles sont les aides financières disponibles entre 2019 et 2021 ?",
+                  "Aides financières disponibles entre 2019 et 2021 ?",
+                  "Quels types d'aides financières étaient disponibles entre 2019 et 2021 ?"
+              ],
+           "responses": ["Entre 2019 et 2021, les aides financières disponibles étaient : en 2019, il y avait 170 dossiers déposés, 147 dossiers acceptés, avec un budget de 52693 euros et une aide moyenne de 358.455782313 euros. En 2020, il y avait 430 dossiers déposés, 407 dossiers acceptés, avec un budget de 137656 euros et une aide moyenne de 338.221130221 euros. En 2021, il y avait 92 dossiers déposés, 82 dossiers acceptés, avec un budget de 31301 euros et une aide moyenne de 381.719512195 euros."
+              ]
+                },{
+  "tag": "associationInfoEvry",
+  "patterns": [
+    "Quelles sont les informations sur l'Association Info Evry ?",
+    "Parle-moi de l'Association Info Evry.",
+    "Quels sont les objectifs de l'Association Info Evry ?",
+    "Comment contacter l'Association Info Evry ?",
+    "Quels événements organise l'Association Info Evry ?"
+  ],
+  "responses": [
+    "L'association Association du Département Informatique d'Evry-Val-d'Essonne (Association Info Evry) située à Evry dans le code postal 91037 Boulevard de France 23, présidée par Guiillaume COQUARD, a pour objectif d'accueillir et d'aider les étudiants en informatique dans le cadre de leurs études à l’université d’Evry et d'organiser des événements dans le domaine de l’informatique. Vous pouvez en savoir plus sur leur site web : https://asso.info-evry.fr/ ou les suivre sur leurs réseaux sociaux : Instagram : instagram.com/adieve.ueve, Facebook: facebook.com/adieve.ueve, Twitter: twitter.com/adieve_ueve."
+  ]
+},
+  {
+  "tag": "associationAMFA",
+  "patterns": [
+    "Quelles sont les informations sur l'AMFA ?",
+    "Parle-moi de l'AMFA.",
+    "Quels sont les objectifs de l'AMFA ?",
+    "Comment contacter l'AMFA ?",
+    "Quels événements organise l'AMFA ?"
+  ],
+  "responses": [
+    "L'association Anciens et amis du Master 2 Fusions & Acquisitions (AMFA) située à Paris dans le code postal 75008 Rue de Copenhague 8, présidée par Salomé BENHINI, a pour objectif de promouvoir et représenter la formation du Master auprès du milieu professionnel. Elle s’est également donnée comme objectif d’animer la vie étudiante du Master, et de développer une cohésion durable entre les étudiants. À cet effet, elle organise chaque année divers événements : rencontres avec les anciens étudiants du Master et avec des étudiants issus d’autres formations, rencontres sportives, cérémonie de remise des diplômes. Vous pouvez en savoir plus sur leur site web : http://www.m2fusac.fr/association/presentation-de-lassociation/."
+  ]
+},{
+  "tag": "associationASEED",
+  "patterns": [
+    "Quelles sont les informations sur l'ASEED ?",
+    "Parle-moi de l'ASEED.",
+    "Quels sont les objectifs de l'ASEED ?",
+    "Comment contacter l'ASEED ?",
+    "Quels événements organise l'ASEED ?"
+  ],
+  "responses": [
+    "L'association Association Sénégalaise des Etudiants et Diplômés d’Evry (ASEED) située à Evry dans le code postal 91025 Rue Jules Vallès 8, présidée par Pape Daouda WADE, a pour objectif de mener des activités culturelles visant à faire connaître les facettes de la culture sénégalaise. Vous pouvez en savoir plus sur leur site web : En cours ou les suivre sur leurs réseaux sociaux : https://www.facebook.com/Association-des-%C3%89tudiants-S%C3%A9n%C3%A9galais-dEvry-110027656570858."
+  ]
+},{
+  "tag": "associationESTHESIE",
+  "patterns": [
+    "Quelles sont les informations sur l'Association ESTHESIE ?",
+    "Parle-moi de l'Association ESTHESIE.",
+    "Quels sont les objectifs de l'Association ESTHESIE ?",
+    "Comment contacter l'Association ESTHESIE ?",
+    "Quels événements organise l'Association ESTHESIE ?"
+  ],
+  "responses": [
+    "L'association Association ESTHESIE (ESTHESIE) située à Boulogne-Billancourt dans le code postal 92100 Rue de Silly 68, présidée par Nicolas GARCIA, a pour objectif de réunir différents artistes autour de projets éclectiques dans une dynamique de soutien et d’entraide. Ces projets peuvent être : la production audiovisuelle, l’écriture littéraire, la production musicale, la peinture, la sculpture. Vous pouvez en savoir plus sur leur site web : www.esthesie.fr ou les suivre sur leurs réseaux sociaux : www.facebook.com/esthesie."
+  ]
+}, {
+  "tag": "associationEvORobS",
+  "patterns": [
+    "Quelles sont les informations sur l'Association EvORobS ?",
+    "Parle-moi de l'Association EvORobS.",
+    "Quels sont les objectifs de l'Association EvORobS ?",
+    "Comment contacter l'Association EvORobS ?",
+    "Quels événements organise l'Association EvORobS ?"
+  ],
+  "responses": [
+    "L'association Evry Organisation Robotics Student (EvORobS) située à Evry dans le code postal 91020 Rue du Pelvoux 40, présidée par Chériff Issa Tiékoura SAWADOGO, a pour objectif de promouvoir la robotique et de rechercher, concevoir et créer des robots. Vous pouvez en savoir plus sur leur site web : / ou les suivre sur leurs réseaux sociaux : /."
+  ]
+},{
+  "tag": "associationCocottesMinutes",
+  "patterns": [
+    "Quelles sont les informations sur l'Association Les Cocottes Minutes ?",
+    "Parle-moi de l'Association Les Cocottes Minutes.",
+    "Quels sont les objectifs de l'Association Les Cocottes Minutes ?",
+    "Comment contacter l'Association Les Cocottes Minutes ?",
+    "Quels événements organise l'Association Les Cocottes Minutes ?"
+  ],
+  "responses": [
+    "L'association Les cocottes Minutes située à Evry-Courcouronnes dans le code postal 91000 Boulevard François Mitterand 23, présidée par Clément DEMOUGIN, a pour objectif de promouvoir l’écologie à l’université, et plus largement au sein de la ville. L’association œuvre pour la sensibilisation aux enjeux environnementaux d’une part, et à l’amélioration de l’empreinte environnementale de l’université d’autre part dans un contexte de dérèglement climatique. Dans ce but, elle organise des activités (ateliers, projections de films, conférences, sorties nature) sur la thématique de l’environnement et du contexte écologique. Elle est aussi amenée à dialoguer avec les administrations et à réfléchir sur les moyens à mettre en place pour réduire l’impact des activités universitaires sur l’environnement. Vous pouvez en savoir plus sur leur site web : Non ou les suivre sur leurs réseaux sociaux : https://www.facebook.com/Les-Cocottes-Minutes-104497084298314/ https://www.instagram.com/lescocottes.evry."
+  ]
+},{
+  "tag": "associationRevonsRealizons",
+  "patterns": [
+    "Quelles sont les informations sur l'Association Rêvons Réalizons ?",
+    "Parle-moi de l'Association Rêvons Réalizons.",
+    "Quels sont les objectifs de l'Association Rêvons Réalizons ?",
+    "Comment contacter l'Association Rêvons Réalizons ?",
+    "Quels événements organise l'Association Rêvons Réalizons ?"
+  ],
+  "responses": [
+    "L'association Rêvons Réalizons située à Paris dans le code postal 75003 Rue des Tounelles 50, présidée par Insaf MOHAMED RIZAN, a pour objectif de répondre aux besoins des personnes en difficulté par le biais d'actions. L’association repose sur 3 piliers : santé et solidarité, écologie, humanitaire. Vous pouvez en savoir plus sur leur site web : https://revonsrealizons.wixsite.com/rrealizons ou les suivre sur leurs réseaux sociaux : Instagram : Rêvons Réalizons, Facebook : Rêvons Réalizons, Twitter : @RevonsR."
+  ]
+},{
+  "tag": "associationBDESGM",
+  "patterns": [
+    "Quelles sont les informations sur l'Association BDE SGM ?",
+    "Parle-moi de l'Association BDE SGM.",
+    "Quels sont les objectifs de l'Association BDE SGM ?",
+    "Comment contacter l'Association BDE SGM ?",
+    "Quels événements organise l'Association BDE SGM ?"
+  ],
+  "responses": [
+    "L'association Bureau des étudiants Science et Génie des matériaux (BDE SGM) située à None dans le code postal inconnu None inconnu, présidée par Päul PATAULT, a pour objectif de réaliser des activités ou des objets pour les étudiants du DUT Science et Génie des Matériaux de l'Université d'Évry. Vous pouvez en savoir plus sur leur site web : Non ou les suivre sur leurs réseaux sociaux : //."
+  ]
+},{
+  "tag": "associationREP",
+  "patterns": [
+    "Quelles sont les informations sur l'Association REP ?",
+    "Parle-moi de l'Association REP.",
+    "Quels sont les objectifs de l'Association REP ?",
+    "Comment contacter l'Association REP ?",
+    "Quels événements organise l'Association REP ?"
+  ],
+  "responses": [
+    "L'association Rencontres etudiants Professeurs de l’IUT d’Evry (REP) située à Evry-Courcouronnes dans le code postal 91000 Boulevard François Mitterrand 23, présidée par TANG Jennifer, a pour objectif d’améliorer la cohésion entre étudiants et professeurs, à travers des activités ludiques ou des projets. Vous pouvez en savoir plus sur leur site web : Non ou les suivre sur leurs réseaux sociaux : Non."
+  ]
+},{
+  "tag": "associationReveEnfantAfrique",
+  "patterns": [
+    "Quelles sont les informations sur l'Association Rêve d’enfant Afrique ?",
+    "Parle-moi de l'Association Rêve d’enfant Afrique.",
+    "Quels sont les objectifs de l'Association Rêve d’enfant Afrique ?",
+    "Comment contacter l'Association Rêve d’enfant Afrique ?",
+    "Quels événements organise l'Association Rêve d’enfant Afrique ?"
+  ],
+  "responses": [
+    "L'association Rêve d’enfant Afrique située à Bondoufle dans le code postal 91070 Route de Villepecle 5, présidée par Ilan KASANOV, a pour objectif de venir en aide aux enfants défavorisés d’Afrique et notamment ceux du Togo. Vous pouvez en savoir plus sur leur site web : https://reveenfantafrique.wordpress.com/association/ ou les suivre sur leurs réseaux sociaux : //."
+  ]
+},{
+  "tag": "associationSoliFood",
+  "patterns": [
+    "Quelles sont les informations sur l'Association Soli’Food ?",
+    "Parle-moi de l'Association Soli’Food.",
+    "Quels sont les objectifs de l'Association Soli’Food ?",
+    "Comment contacter l'Association Soli’Food ?",
+    "Quels événements organise l'Association Soli’Food ?"
+  ],
+  "responses": [
+    "L'association Soli’Food située à Evry-Courcouronnes dans le code postal 91000 Boulevard François Mitterand 23, présidée par Vincent CRETOIS, a pour objectif de distribuer de la nourriture pour les personnes les plus démunies. Vous pouvez en savoir plus sur leur site web : Non ou les suivre sur leurs réseaux sociaux : Non."
+  ]
+},{
+  "tag": "associationUEE",
+  "patterns": [
+    "Quelles sont les informations sur l'Association UEE ?",
+    "Parle-moi de l'Association UEE.",
+    "Quels sont les objectifs de l'Association UEE ?",
+    "Comment contacter l'Association UEE ?",
+    "Quels événements organise l'Association UEE ?"
+  ],
+  "responses": [
+    "L'association Union des étudiants d’Evry (UEE) située à Evry-Courcouronnes dans le code postal 91000 Boulevard François Mitterand 23, présidée par Emmanuella ZOULOU, a pour objectif d’organiser des événements à destination des étudiants. Vous pouvez en savoir plus sur leur site web : Non ou les suivre sur leurs réseaux sociaux : https://www.facebook.com/uniondesetudiantsdevry."
+  ]
+},{
+  "tag": "associationVeniVidiSensi",
+  "patterns": [
+    "Quelles sont les informations sur l'Association Veni Vidi Sensi ?",
+    "Parle-moi de l'Association Veni Vidi Sensi.",
+    "Quels sont les objectifs de l'Association Veni Vidi Sensi ?",
+    "Comment contacter l'Association Veni Vidi Sensi ?",
+    "Quels événements organise l'Association Veni Vidi Sensi ?"
+  ],
+  "responses": [
+    "L'association Veni Vidi Sensi située à Paris dans le code postal 75008 79 rue de Clichy, présidée par Aymeric du Peloux de Saint Romain, a pour objectif de créer des événements, des séminaires et des conférences pour des entreprises et leurs salariés. Vous pouvez en savoir plus sur leur site web : www.venividisensi.com ou les suivre sur leurs réseaux sociaux : https://www.facebook.com/venividisensi."
+  ]
+},{
+  "tag": "associationWAXScience",
+  "patterns": [
+    "Quelles sont les informations sur l'Association WAX Science ?",
+    "Parle-moi de l'Association WAX Science.",
+    "Quels sont les objectifs de l'Association WAX Science ?",
+    "Comment contacter l'Association WAX Science ?",
+    "Quels événements organise l'Association WAX Science ?"
+  ],
+  "responses": [
+    "L'association WAX Science située à Paris dans le code postal 75018 Rue Riquet 16, présidée par Kwasi LURIE, a pour objectif de promouvoir la diversité dans les domaines scientifiques, de susciter et d’entretenir la curiosité des jeunes, et particulièrement des jeunes filles pour les disciplines scientifiques, et enfin de lutter contre les stéréotypes et le sentiment d’illégitimité des femmes dans les domaines scientifiques. Vous pouvez en savoir plus sur leur site web : www.wax-science.fr ou les suivre sur leurs réseaux sociaux : Instagram : @wax_science, Facebook : https://www.facebook.com/WAXScience."
+  ]
+},{
+  "tag": "associationAIESEC",
+  "patterns": [
+    "Quelles sont les informations sur l'Association AIESEC ?",
+    "Parle-moi de l'Association AIESEC.",
+    "Quels sont les objectifs de l'Association AIESEC ?",
+    "Comment contacter l'Association AIESEC ?",
+    "Quels événements organise l'Association AIESEC ?"
+  ],
+  "responses": [
+    "L'association AIESEC située à Evry-Courcouronnes dans le code postal 91000 Boulevard François Mitterrand 23, présidée par Lorine NZUZI MAKENGI, a pour objectif d’offrir aux jeunes la possibilité de développer leur leadership à travers des opportunités de stage à l’étranger et des expériences de volontariat. Vous pouvez en savoir plus sur leur site web : Non ou les suivre sur leurs réseaux sociaux : https://www.facebook.com/aiesec.france."
+  ]
+},
+  {
+    "tag": "laboratoiresUniversité",
+    "patterns": [
+      "Combien de laboratoires y a-t-il à l'université ?",
+      "Quel est le total de laboratoires à l'université "
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 19 laboratoires à l'université."
+    ]
+  },
+  {
+    "tag": "doctorantsUniversité",
+    "patterns": [
+      "Combien de doctorants sont inscrits à l'université ?",
+      "Quel est le total de laboratoires présents à l'université ?",
+      "Combien de laboratoires sont présents à l'université ?"
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 240 doctorants inscrits pour l'année 2021/2022."
+    ]
+  },
+  {
+    "tag": "ecolesDoctoralesUniversité",
+    "patterns": [
+      "Combien d'écoles doctorales y a-t-il à l'université ?",
+      "Combien l'université compte-t-elle d'écoles doctorales ?",
+      "Quel est le total d'écoles doctorales à l'université ?"
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 9 écoles doctorales."
+    ]
+  },
+  {
+    "tag": "chiffresRecherche",
+    "patterns": [
+      "Quels sont les chiffres clés pour la recherche à l'université ?"
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 19 laboratoires à l'université.",
+      "Pour le thème 'Recherche', il y a 240 doctorants inscrits pour l'année 2021/2022.",
+      "Pour le thème 'Recherche', il y a 9 écoles doctorales."
+    ]
+  }
+,{
+  "tag": "chiffresPersonnel",
+  "patterns": [
+    "Quels sont les chiffres clés pour le personnel à l'université ?",
+    "Combien y a-t-il d'enseignants et/ou chercheurs à l'université ?",
+    "Combien de personnel administratif y a-t-il à l'université ?"
+  ],
+  "responses": [
+    "Pour le thème 'Personnel', il y a 591 enseignants et/ou chercheurs au 30 avril 2022.",
+    "Pour le thème 'Personnel', il y a 394 personnel administratif au 30 avril 2022."
+  ]
+},{
+  "tag": "chiffresBatiments",
+  "patterns": [
+    "Quels sont les chiffres clés pour les bâtiments de l'université ?",
+    "Combien de bâtiments y a-t-il à l'université ?"
+  ],
+  "responses": [
+    "Pour le thème 'Bâtiments', il y a 12 bâtiments à l'université."
+  ]
+},{
+  "tag": "chiffresVieCampus",
+  "patterns": [
+    "Quels sont les chiffres clés pour la vie du campus ?",
+    "Combien de disciplines sportives sont proposées à l'université ?",
+    "Combien d'associations étudiantes y a-t-il à l'université ?"
+  ],
+  "responses": [
+    "Pour le thème 'Vie du campus', il y a 45 disciplines sportives proposées.",
+    "Pour le thème 'Vie du campus', il y a 25 associations étudiantes."
+  ]
+  },{
+      "tag": "formationsUniversité",
+      "patterns": [
+        "Combien de formations y a-t-il à l'université ?",
+        "Quel est le nombre de programmes d'études à l'université ?",
+        "Pouvez-vous me dire combien il y a de formations à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 160 formations."
+      ]
+    },
+    {
+      "tag": "nombreEtudiantsUniversité",
+      "patterns": [
+        "Combien d'étudiants y a-t-il à l'université ?",
+        "Quel est le nombre total d'étudiants à l'université ?",
+        "Pouvez-vous indiquer combien d'étudiants sont inscrits à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 11337 étudiants pour l'année 2021/2022."
+      ]
+    },
+    {
+      "tag": "composantesUniversité",
+      "patterns": [
+        "Combien de composantes y a-t-il à l'université ?",
+        "Quel est le nombre de facultés et départements à l'université ?",
+        "Pouvez-vous me dire combien il y a de composantes à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 6 composantes (dont 1 IUT)."
+      ]
+    },
+    {
+      "tag": "chiffresEtudiants",
+      "patterns": [
+        "Quels sont les chiffres clés pour les étudiants à l'université ?",
+        "Quelles sont les statistiques principales concernant les étudiants à l'université ?",
+        "Pouvez-vous résumer les données importantes sur les étudiants à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 160 formations.",
+        "Pour le thème 'Étudiants', il y a 11337 étudiants pour l'année 2021/2022.",
+        "Pour le thème 'Étudiants', il y a 6 composantes (dont 1 IUT)."
+      ]
+    },{
+  "tag": "chiffresBibliotheque",
+  "patterns": [
+    "Quels sont les chiffres clés pour la bibliothèque universitaire ?",
+    "Combien d'antennes y a-t-il pour la bibliothèque universitaire ?",
+    "Combien de places de lecture y a-t-il à la bibliothèque universitaire ?",
+    "Combien d'ouvrages y a-t-il à la bibliothèque universitaire ?"
+  ],
+  "responses": [
+    "Pour le thème 'Bibliothèque Universitaire', il y a 3 antennes.",
+    "Pour le thème 'Bibliothèque Universitaire', il y a 750 places de lecture.",
+    "Pour le thème 'Bibliothèque Universitaire', il y a 246084 ouvrages."
+  ]
+},{
+  "tag": "chiffresUniversite",
+  "patterns": [
+    "Quels sont les chiffres clés de l'université ?",
+    "Pouvez-vous me donner des informations sur les chiffres clés de l'université ?",
+    "Quelles sont les statistiques importantes de l'université ?",
+    "Quels sont les chiffres concernant les laboratoires, le personnel et les étudiants de l'université ?",
+    "Combien de laboratoires et de doctorants y a-t-il à l'université ?",
+    "Combien d'enseignants et de personnel administratif travaillent à l'université ?",
+    "Combien de bâtiments possède l'université ?",
+    "Quelles sont les disciplines sportives proposées et le nombre d'associations étudiantes à l'université ?",
+    "Combien y a-t-il de formations et d'étudiants à l'université ?",
+    "Quels sont les chiffres pour la bibliothèque universitaire, en termes d'antennes, de places de lecture et d'ouvrages ?"
+  ],
+  "responses": [
+    "Voici quelques chiffres clés de l'université :\n\nRecherche:\n- 19 laboratoires\n- 240 doctorants inscrits pour l'année 2021/2022\n- 9 écoles doctorales\n\nPersonnel:\n- 591 enseignants et/ou chercheurs au 30 avril 2022\n- 394 personnel administratif au 30 avril 2022\n\nBâtiments:\n- 12 bâtiments\n\nVie du campus:\n- 45 disciplines sportives proposées\n- 25 associations étudiantes\n\nÉtudiants:\n- 160 formations\n- 11337 étudiants pour l'année 2021/2022\n- 6 composantes (dont 1 IUT)\n\nBibliothèque Universitaire:\n- 3 antennes\n- 750 places de lecture\n- 246084 ouvrages."
+  ]
+},{
+  "tag": "themeRecherche",
+  "patterns": [
+    "Quels sont les chiffres clés pour le thème 'Recherche' à l'université ?",
+    "Combien de laboratoires de recherche y a-t-il à l'université ?",
+    "Combien de doctorants sont inscrits à l'université pour l'année 2021/2022 ?",
+    "Combien d'écoles doctorales y a-t-il à l'université ?"
+  ],
+  "responses": [
+    "Pour le thème 'Recherche', voici les chiffres clés :\n- 19 laboratoires\n- 240 doctorants inscrits pour l'année 2021/2022\n- 9 écoles doctorales"
+  ]
+},{
+  "tag": "themePersonnel",
+  "patterns": [
+    "Quels sont les chiffres clés pour le thème 'Personnel' à l'université ?",
+    "Combien d'enseignants et/ou chercheurs y a-t-il à l'université ?",
+    "Combien de personnel administratif y a-t-il à l'université ?"
+  ],
+  "responses": [
+    "Pour le thème 'Personnel', voici les chiffres clés :\n- 591 enseignants et/ou chercheurs au 30 avril 2022\n- 394 personnel administratif au 30 avril 2022"
+  ]
+},{
+  "tag": "themeLaboratoires",
+  "patterns": [
+    "Combien de laboratoires y a-t-il à l'université ?",
+    "Quels sont les chiffres pour les laboratoires à l'université ?",
+    "Combien de laboratoires de recherche sont à l'université ?"
+  ],
+  "responses": [
+    "Il y a 19 laboratoires à l'université."
+  ]
+},{
+  "tag": "themeDoctorants",
+  "patterns": [
+    "Combien de doctorants sont inscrits à l'université pour l'année 2021/2022 ?",
+    "Quels sont les chiffres pour les doctorants à l'université ?",
+    "Combien de doctorants y a-t-il à l'université ?"
+  ],
+  "responses": [
+    "Il y a 240 doctorants inscrits à l'université pour l'année 2021/2022."
+  ]
+},{
+  "tag": "themeDisciplinesSportives",
+  "patterns": [
+    "Combien de disciplines sportives sont proposées à l'université ?",
+    "Quels sont les chiffres pour les disciplines sportives à l'université ?",
+    "Combien de sports sont proposés à l'université ?"
+  ],
+  "responses": [
+    "Il y a 45 disciplines sportives proposées à l'université."
+  ]
+},{
+  "tag": "themeAssociationsEtudiantes",
+  "patterns": [
+    "Combien d'associations étudiantes y a-t-il à l'université ?",
+    "Quels sont les chiffres pour les associations étudiantes à l'université ?",
+    "Combien d'organisations étudiantes y a-t-il à l'université ?"
+  ],
+  "responses": [
+    "Il y a 25 associations étudiantes à l'université."
+  ]
+},{
+  "tag": "themeEtudiantsInscrits",
+  "patterns": [
+    "Combien d'étudiants sont inscrits à l'université pour l'année 2021/2022 ?",
+    "Quels sont les chiffres pour les étudiants inscrits à l'université ?",
+    "Combien d'étudiants y a-t-il à l'université pour l'année 2021/2022 ?"
+  ],
+  "responses": [
+    "Il y a 11337 étudiants inscrits à l'université pour l'année 2021/2022."
+  ]
+},{
+  "tag": "IUTRomero",
+  "patterns": [
+    "Informations sur le bâtiment IUT Roméro.",
+    "Où se trouve l'IUT Roméro ?"
+  ],
+  "responses": [
+    "Le bâtiment IUT Roméro est situé à 25 cours Monseigneur Roméro dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.622903, 2.427412)."
+  ]
+},{
+  "tag": "MaisonSante",
+  "patterns": [
+    "Qu'est-ce que la Maison de la Santé ?",
+    "Localisation de la Maison de la Santé."
+  ],
+  "responses": [
+    "La Maison de la Santé est située à Ile de France dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.624067, 2.427220)."
+  ]
+},{
+  "tag": "ServiceSUAPS",
+  "patterns": [
+    "Détails sur le Service SUAPS.",
+    "Emplacement du Service SUAPS."
+  ],
+  "responses": [
+    "Le Service SUAPS est situé à 1er Cycles dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.623253, 2.424634)."
+  ]
+},{
+  "tag": "DirectionDSE",
+  "patterns": [
+    "Informations sur la Direction de la Scolarité et des Études.",
+    "Où se trouve la Direction de la Scolarité et des Études ?"
+  ],
+  "responses": [
+    "La Direction de la Scolarité et des Études est située à Ile de France dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.624067, 2.427220)."
+  ]
+},{
+  "tag": "DirectionDRRI",
+  "patterns": [
+    "Détails sur la Direction de la Recherche et des Relations Internationales.",
+    "Emplacement de la Direction de la Recherche et des Relations Internationales."
+  ],
+  "responses": [
+    "La Direction de la Recherche et des Relations Internationales est située à Ile de France dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.624067, 2.427220)."
+  ]
+},{
+  "tag": "DirectionDVEC",
+  "patterns": [
+    "Informations sur la Direction de la Vie Étudiante et de Campus.",
+    "Où se trouve la Direction de la Vie Étudiante et de Campus ?"
+  ],
+  "responses": [
+    "La Direction de la Vie Étudiante et de Campus est située au Rez-de-chaussée, bureau 42 dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.624067, 2.427220)."
+  ]
+},{
+  "tag": "BatimentBibliothequeUniversitaire",
+  "patterns": [
+    "Informations sur le bâtiment Bibliothèque Universitaire.",
+    "Où se trouve la Bibliothèque Universitaire ?"
+  ],
+  "responses": [
+    "La Bibliothèque Universitaire est située à 2 rue André Lalande dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.623718, 2.425684)."
+  ]
+},{
+  "tag": "BatimentPremiersCycles",
+  "patterns": [
+    "Détails sur le bâtiment 1ers Cycles.",
+    "Emplacement du bâtiment 1ers Cycles."
+  ],
+  "responses": [
+    "Le bâtiment 1ers Cycles est situé à 1 rue Pierre Bérégovoy dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.623253, 2.424634)."
+  ]
+},{
+  "tag": "BatimentFacteurCheval",
+  "patterns": [
+    "Informations sur le bâtiment Facteur Cheval.",
+    "Où se trouve le bâtiment Facteur Cheval ?"
+  ],
+  "responses": [
+    "Le bâtiment Facteur Cheval est situé à 2 rue du Facteur Cheval dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.631217, 2.431325)."
+  ]
+},{
+  "tag": "BatimentPelvoux",
+  "patterns": [
+    "Détails sur le bâtiment Pelvoux.",
+    "Emplacement du bâtiment Pelvoux."
+  ],
+  "responses": [
+    "Le bâtiment Pelvoux est situé à 36-40 rue Pelvoux dans le code postal 91080 à Évry-Courcouronnes, aux coordonnées (48.613144, 2.428180)."
+  ]
+},{
+  "tag": "BatimentEmulateurCMA",
+  "patterns": [
+    "Informations sur le bâtiment Emulateur - CMA.",
+    "Où se trouve le bâtiment Emulateur - CMA ?"
+  ],
+  "responses": [
+    "Le bâtiment Emulateur - CMA est situé à 31 cours Blaise Pascal dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.625290, 2.430526)."
+  ]
+},{
+  "tag": "BatimentEspacePrepAvenir",
+  "patterns": [
+    "Détails sur le bâtiment Espace Prep'Avenir.",
+    "Où se trouve le bâtiment Espace Prep'Avenir ?"
+  ],
+  "responses": [
+    "Le bâtiment Espace Prep'Avenir est situé à 4 cours Blaise Pascal dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.628001, 2.430429)."
+  ]
+},{
+  "tag": "ServiceDOIP",
+  "patterns": [
+    "Informations sur le Service DOIP.",
+    "Où se trouve le Service DOIP ?"
+  ],
+  "responses": [
+    "Le Service DOIP (Direction de l'Orientation et de l'Insertion Professionnelle) est situé à Ile de France dans le code postal 91025 à Évry-Courcouronnes, aux coordonnées (48.624067, 2.427220)."
+  ]
+},{
+  "tag": "TauxReussiteArtsLettresLanguesL2-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Arts, Lettres et Langues, étape L2, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Arts, Lettres et Langues, pour l'étape L2 et l'année d'inscription 2022, le taux de réussite est de 70.25316455696202%."
+  ]
+},{
+  "tag": "TauxReussiteArtsLettresLanguesL3-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Arts, Lettres et Langues, étape L3, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Arts, Lettres et Langues, pour l'étape L3 et l'année d'inscription 2021, le taux de réussite est de 77.62237762237763%."
+  ]
+},{
+  "tag": "TauxReussiteArtsLettresLanguesL3-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Arts, Lettres et Langues, étape L3, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Arts, Lettres et Langues, pour l'étape L3 et l'année d'inscription 2022, le taux de réussite est de 65.35433070866141%."
+  ]
+},{
+  "tag": "TauxReussiteArtsLettresLanguesMaster1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Arts, Lettres et Langues, étape Master1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Arts, Lettres et Langues, pour l'étape Master1 et l'année d'inscription 2021, le taux de réussite est de 84.61538461538461%."
+  ]
+},{
+  "tag": "TauxReussiteDroitEconomieGestionL2-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Droit, Economie, Gestion, étape L2, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Droit, Economie, Gestion, pour l'étape L2 et l'année d'inscription 2022, le taux de réussite est de 61.038961038961034%."
+  ]
+},{
+  "tag": "TauxReussiteDroitEconomieGestionDU-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Droit, Economie, Gestion, étape DU, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Droit, Economie, Gestion, pour l'étape DU et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},{
+  "tag": "TauxReussiteDroitEconomieGestionDU-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Droit, Economie, Gestion, étape DU, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Droit, Economie, Gestion, pour l'étape DU et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},{
+  "tag": "TauxReussiteDroitEconomieGestionL1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Droit, Economie, Gestion, étape L1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Droit, Economie, Gestion, pour l'étape L1 et l'année d'inscription 2021, le taux de réussite est de 32.788296041308094%."
+  ]
+},{
+  "tag": "TauxReussiteDroitEconomieGestionL1-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Droit, Economie, Gestion, étape L1, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Droit, Economie, Gestion, pour l'étape L1 et l'année d'inscription 2022, le taux de réussite est de 30.74074074074074%."
+  ]
+},{
+  "tag": "TauxReussiteDroitEconomieGestionL2-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Droit, Economie, Gestion, étape L2, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Droit, Economie, Gestion, pour l'étape L2 et l'année d'inscription 2021, le taux de réussite est de 53.785488958990534%."
+  ]
+},{
+  "tag": "TauxReussiteDroitEconomieGestionL3-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Droit, Economie, Gestion, étape L3, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Droit, Economie, Gestion, pour l'étape L3 et l'année d'inscription 2021, le taux de réussite est de 81.07569721115537%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesHumainesSocialesL1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences Humaines et Sociales, étape L1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences Humaines et Sociales, pour l'étape L1 et l'année d'inscription 2021, le taux de réussite est de 28.901734104046245%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesHumainesSocialesMastMEEF2-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences Humaines et Sociales, étape Mast. MEEF2, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences Humaines et Sociales, pour l'étape Mast. MEEF2 et l'année d'inscription 2022, le taux de réussite est de 88.40579710144928%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteBUT1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape BUT1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape BUT1 et l'année d'inscription 2021, le taux de réussite est de 61.53846153846154%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteBUT2-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape BUT2, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape BUT2 et l'année d'inscription 2021, le taux de réussite est de 81.14035087719299%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteL1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape L1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape L1 et l'année d'inscription 2021, le taux de réussite est de 44.483058210251954%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteL2-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape L2, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape L2 et l'année d'inscription 2021, le taux de réussite est de 59.01639344262295%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteL3-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape L3, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape L3 et l'année d'inscription 2021, le taux de réussite est de 71.01669195751138%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteMaster1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape MASTER1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape MASTER1 et l'année d'inscription 2021, le taux de réussite est de 82.58928571428571%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteMaster2-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape MASTER2, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape MASTER2 et l'année d'inscription 2021, le taux de réussite est de 86.3036303630363%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteLicencePro-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Licence pro, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape Licence pro et l'année d'inscription 2021, le taux de réussite est de 90.52132701421802%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteDU-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape DU, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape DU et l'année d'inscription 2021, le taux de réussite est de 73.60406091370558%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteDEUST1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape DEUST1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape DEUST1 et l'année d'inscription 2021, le taux de réussite est de 57.8125%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteDEUST2-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape DEUST2, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape DEUST2 et l'année d'inscription 2022, le taux de réussite est de 54.166666666666664%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteMastMEEF1-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Mast. MEEF1, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape Mast. MEEF1 et l'année d'inscription 2022, le taux de réussite est de 80.95238095238095%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteMaster1-2021",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape MASTER1, année d'inscription 2021."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape MASTER1 et l'année d'inscription 2021, le taux de réussite est de 82.58928571428571%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteBUT1-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape BUT1, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape BUT1 et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteBUT2-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape BUT2, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape BUT2 et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteLicencePro-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Licence pro, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape Licence pro et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteLicencePro-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Licence pro, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape Licence pro et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteLicencePro-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Licence pro, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape Licence pro et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteMastMEEF2-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Mast. MEEF2, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape Mast. MEEF2 et l'année d'inscription 2022, le taux de réussite est de 63.1578947368421%."
+  ]
+},{
+  "tag": "TauxReussiteSciencesTechnologiesSanteMASTER2-2022",
+  "patterns": [
+    "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape MASTER2, année d'inscription 2022."
+  ],
+  "responses": [
+    "Dans le domaine Sciences, Technologies, Santé, pour l'étape MASTER2 et l'année d'inscription 2022, le taux de réussite est de None%."
+  ]
+},
+  {
+    "tag": "TauxReussiteSciencesTechnologiesSanteMaster1-2021",
+    "patterns": [
+      "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape MASTER1, année d'inscription 2021."
+    ],
+    "responses": [
+      "Dans le domaine Sciences, Technologies, Santé, pour l'étape MASTER1 et l'année d'inscription 2021, le taux de réussite est de 82.58928571428571%."
+    ]
+  },
+  {
+    "tag": "TauxReussiteSciencesTechnologiesSanteBUT1-2022",
+    "patterns": [
+      "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape BUT1, année d'inscription 2022."
+    ],
+    "responses": [
+      "Dans le domaine Sciences, Technologies, Santé, pour l'étape BUT1 et l'année d'inscription 2022, le taux de réussite est de None%."
+    ]
+  },
+  {
+    "tag": "TauxReussiteSciencesTechnologiesSanteBUT2-2022",
+    "patterns": [
+      "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape BUT2, année d'inscription 2022."
+    ],
+    "responses": [
+      "Dans le domaine Sciences, Technologies, Santé, pour l'étape BUT2 et l'année d'inscription 2022, le taux de réussite est de None%."
+    ]
+  },
+  {
+    "tag": "TauxReussiteSciencesTechnologiesSanteLicencePro-2022",
+    "patterns": [
+      "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Licence pro, année d'inscription 2022."
+    ],
+    "responses": [
+      "Dans le domaine Sciences, Technologies, Santé, pour l'étape Licence pro et l'année d'inscription 2022, le taux de réussite est de None%."
+    ]
+  },
+  {
+    "tag": "TauxReussiteSciencesTechnologiesSanteMastMEEF2-2022",
+    "patterns": [
+      "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape Mast. MEEF2, année d'inscription 2022."
+    ],
+    "responses": [
+      "Dans le domaine Sciences, Technologies, Santé, pour l'étape Mast. MEEF2 et l'année d'inscription 2022, le taux de réussite est de 63.1578947368421%."
+    ]
+  },
+  {
+    "tag": "TauxReussiteSciencesTechnologiesSanteMASTER2-2022",
+    "patterns": [
+      "Taux de réussite pour le domaine Sciences, Technologies, Santé, étape MASTER2, année d'inscription 2022."
+    ],
+    "responses": [
+      "Dans le domaine Sciences, Technologies, Santé, pour l'étape MASTER2 et l'année d'inscription 2022, le taux de réussite est de None%."
+    ]
+  },
+  {
+    "tag": "TauxReussiteDomaine",
+    "patterns": [
+      "Taux de réussite pour le domaine ARTS, LETTRES ET LANGUES."
+    ],
+    "responses": [
+      "Le taux de réussite dans le domaine ARTS, LETTRES ET LANGUES est de 70.25316455696202% pour l'étape L2 en 2022, de 77.62237762237763% pour l'étape L3 en 2021, de 65.35433070866141% pour l'étape L3 en 2022, de 84.61538461538461% pour l'étape MASTER1 en 2021, et le taux pour l'étape MASTER2 en 2021 n'est pas disponible."
+    ]
+  },
+  {
+    "tag": "TauxReussiteEtape",
+    "patterns": [
+      "Taux de réussite pour l'étape L2 dans le domaine ARTS, LETTRES ET LANGUES."
+    ],
+    "responses": [
+      "Le taux de réussite pour l'étape L2 dans le domaine ARTS, LETTRES ET LANGUES est de 70.25316455696202% en 2022."
+    ]
+  },
+  {
+    "tag": "TauxReussiteAnnee",
+    "patterns": [
+      "Taux de réussite pour l'année d'inscription 2021 dans le domaine ARTS, LETTRES ET LANGUES pour l'étape L3."
+    ],
+    "responses": [
+      "Le taux de réussite pour l'année d'inscription 2021 dans le domaine ARTS, LETTRES ET LANGUES pour l'étape L3 est de 77.62237762237763%."
+    ]
+  },
+  {
+    "tag": "TauxReussiteDetaille",
+    "patterns": [
+      "Taux de réussite détaillé pour le domaine DROIT, ECONOMIE, GESTION, l'étape L1 et l'année d'inscription 2022."
+    ],
+    "responses": [
+      "Le taux de réussite pour le domaine DROIT, ECONOMIE, GESTION, l'étape L1 et l'année d'inscription 2022 est de 30.74074074074074%."
+    ]
+  },
+  {
+    "tag": "NombreInscrits",
+    "patterns": [
+      "Combien d'étudiants ont été inscrits en 2022/2023 ?",
+      "Quel est le nombre total d'inscrits pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "En 2022/2023, un total de 899 étudiants ont été inscrits."
+    ]
+  },
+  {
+    "tag": "TypesBac",
+    "patterns": [
+      "Quels types de baccalauréat ont été obtenus par les étudiants en 2022/2023 ?",
+      "Quels sont les différents bacs obtenus par les étudiants pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "Les étudiants ont obtenu différents types de baccalauréat, notamment Bac général, Bac pro, Bac étranger et Equivalence."
+    ]
+  },
+  {
+    "tag": "NombreFemmes",
+    "patterns": [
+      "Combien de femmes ont été inscrites en 2022/2023 ?",
+      "Quel est le nombre total de femmes inscrites pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "Pour l'année académique 2022/2023, un total de 589 femmes ont été inscrites."
+    ]
+  },
+  {
+    "tag": "DomainesEtudes",
+    "patterns": [
+      "Dans quels domaines d'études se spécialisent les étudiants en 2022/2023 ?",
+      "Quels sont les domaines d'études des étudiants pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "Les étudiants se spécialisent dans différents domaines d'études tels que Arts, Lettres et Langues, Sciences Humaines et Sociales, Sciences, Technologies, Santé, Multi-domaine, etc."
+    ]
+  },
+  {
+    "tag": "NombreInscrits",
+    "patterns": [
+      "Combien d'étudiants ont été inscrits en 2022/2023 ?",
+      "Quel est le nombre total d'inscrits pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "En 2022/2023, un total de 899 étudiants ont été inscrits."
+    ]
+  },
+  {
+    "tag": "TypesBac",
+    "patterns": [
+      "Quels types de baccalauréat ont été obtenus par les étudiants en 2022/2023 ?",
+      "Quels sont les différents bacs obtenus par les étudiants pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "Les étudiants ont obtenu différents types de baccalauréat, notamment Bac général, Bac pro, Bac étranger et Equivalence."
+    ]
+  },
+  {
+    "tag": "NombreFemmes",
+    "patterns": [
+      "Combien de femmes ont été inscrites en 2022/2023 ?",
+      "Quel est le nombre total de femmes inscrites pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "Pour l'année académique 2022/2023, un total de 589 femmes ont été inscrites."
+    ]
+  },
+  {
+    "tag": "DomainesEtudes",
+    "patterns": [
+      "Dans quels domaines d'études se spécialisent les étudiants en 2022/2023 ?",
+      "Quels sont les domaines d'études des étudiants pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "Les étudiants se spécialisent dans différents domaines d'études tels que Arts, Lettres et Langues, Sciences Humaines et Sociales, Sciences, Technologies, Santé, Multi-domaine, etc."
+    ]
+  },
+  {
+    "tag": "BacsParGenre",
+    "patterns": [
+      "Quels baccalauréats ont été obtenus par les femmes en 2022/2023 ?",
+      "Quels types de baccalauréat les hommes ont-ils obtenu en 2022/2023 ?"
+    ],
+    "responses": [
+      "Les femmes ont obtenu divers baccalauréats tels que Bac général, Bac pro, Bac étranger et Equivalence.",
+      "Les hommes ont obtenu différents types de baccalauréat comme Bac général, Bac pro, Bac étranger et Equivalence."
+    ]
+  },
+  {
+    "tag": "InscritsParCursus",
+    "patterns": [
+      "Combien d'étudiants étaient inscrits en cursus L en 2022/2023 ?",
+      "Quel est le nombre total d'inscrits par cursus pour l'année académique 2022/2023 ?"
+    ],
+    "responses": [
+      "En 2022/2023, un total de x étudiants étaient inscrits en cursus L.",
+      "Pour l'année académique 2022/2023, le nombre total d'inscrits en cursus L était de x étudiants."
+    ]
+  }
+
+]
 }

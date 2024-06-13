@@ -7,11 +7,12 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 import pickle
+from tensorflow.keras.optimizers import Adam
 
 stemmer = LancasterStemmer()
 
 # Load the intents file
-with open("data.json") as file:
+with open("data.json", encoding='utf-8') as file:
     data = json.load(file)
 
 try:
@@ -75,11 +76,14 @@ model.add(Dropout(0.5))
 model.add(Dense(len(output[0]), activation='softmax'))
 
 # Compile the model
-sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+#sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+#model.compile(loss='categorical_crossent   ropy', optimizer=sgd, metrics=['accuracy'])
+#model.compile(optimizer='adam',loss='mean_squared_error')
+model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=['accuracy'])
+#model.compile(optimizer='adam', loss='mean_absolute_error', metrics=['mean_absolute_error'])
 
 # Train the model
-model.fit(training, output, epochs=200, batch_size=5, verbose=1)
+model.fit(training, output, epochs=2000, batch_size=5, verbose=1)
 model.save("chatbot_model.h5")
 
 # Function to convert user input into bag of words
@@ -105,7 +109,7 @@ def chat():
         results_index = np.argmax(results)
         tag = labels[results_index]
 
-        if results[results_index] > 0.7:
+        if results[results_index] > 0.5:
             for tg in data["intents"]:
                 if tg['tag'] == tag:
                     responses = tg['responses']
