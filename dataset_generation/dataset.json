@@ -1,0 +1,38 @@
+[
+    {
+        "tag": "1",
+        "patterns": [
+            "Quel est l'adresse de l'lysias ervy ?"
+        ],
+        "responses": [
+            " 23  Boulevard Fran\u00e7ois Mitterand 91000"
+        ]
+    },
+    {
+        "tag": "2",
+        "patterns": [
+            "Comment s'appelle le President?"
+        ],
+        "responses": [
+            " GONCALO In\u00e8s"
+        ]
+    },
+    {
+        "tag": "3",
+        "patterns": [
+            "Sur quel r\u00e9seau social lysias ervy a pour Reseaux sociaux ?"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "4",
+        "patterns": [
+            "Quel est le but de l'lysias ervy"
+        ],
+        "responses": [
+            " l'Universit\u00e9 d\u2019\u00c9vry Val d'Essonne.."
+        ]
+    }
+]
