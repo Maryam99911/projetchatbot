@@ -1,20 +1,65 @@
 {"intents": [
-       {
-    "tag": "salutation",
-    "patterns": ["Salut", "Comment ça va", "Y a-t-il quelqu'un?", "Bonjour", "Bonne journée"],
-    "responses": ["Bonjour, merci de votre visite", "Content de vous revoir", "Salut, comment puis-je vous aider?"],
-    "context_set": ""
-},
-{
-    "tag": "au_revoir",
-    "patterns": ["Au revoir", "À plus tard", "Adieu"],
-    "responses": ["À plus tard, merci de votre visite", "Bonne journée", "Au revoir! Revenez bientôt."]
-},
-{
-    "tag": "merci",
-    "patterns": ["Merci", "Merci beaucoup", "C'est utile"],
-    "responses": ["Heureux d'aider!", "À tout moment!", "Avec plaisir"]
-},
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {
+          "tag": "Insultes",
+          "patterns": [
+            "espèce d'idiot",
+            "tu es stupide",
+            "ferme ta gueule",
+            "va te faire",
+            "salaud",
+            "connard",
+            "sale",
+            "raciste",
+            "nègre",
+            "pute",
+            "enculé",
+            "sale arabe"
+          ],
+          "responses": [
+            "Veuillez rester respectueux, merci.",
+            "L'utilisation d'insultes n'est pas tolérée ici.",
+            "Ce type de langage n'est pas acceptable.",
+            "Merci de vous exprimer poliment."
+          ]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "hours",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+         "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {
+          "tag": "salutation",
+          "patterns": ["Salut", "Comment ça va", "Y a-t-il quelqu'un?", "Bonjour", "Bonne journée"],
+          "responses": ["Bonjour, merci de votre visite", "Content de vous revoir", "Salut, comment puis-je vous aider?"],
+          "context_set": ""
+      },
+      {
+          "tag": "au_revoir",
+          "patterns": ["Au revoir", "À plus tard", "Adieu"],
+          "responses": ["À plus tard, merci de votre visite", "Bonne journée", "Au revoir! Revenez bientôt."]
+      },
+      {
+          "tag": "merci",
+          "patterns": ["Merci", "Merci beaucoup", "C'est utile"],
+          "responses": ["Heureux d'aider!", "À tout moment!", "Avec plaisir"]
+      },
+      {
+          "tag": "horaires",
+          "patterns": ["Quels sont vos horaires d'ouverture?", "Quels sont vos horaires?", "Quand êtes-vous ouverts?"],
+          "responses": ["Nous sommes ouverts de 8h00 à 19h45, du lundi au vendredi", "Nos horaires sont de 8h00 à 19h45, du lundi au vendredi"]
+      },
         {"tag": "depose2019",
          "patterns": [ "Combien de dossiers ont été déposés en 2019 ?",
                 "Nombre de dossiers déposés en 2019 ?",
@@ -58,11 +103,11 @@
             "En 2021, le budget total des aides était de 31301 euros avec une aide moyenne de 381.72 euros."
           ]
         }, {"tag": "aidestotal20192020",
-           "patterns": ["Quelles étaient les aides financières disponibles entre 2019 et 2021 ?",
+           "patterns": ["Quelles sont les aides financières disponibles entre 2019 et 2021 ?",
                   "Aides financières disponibles entre 2019 et 2021 ?",
                   "Quels types d'aides financières étaient disponibles entre 2019 et 2021 ?"
               ],
-           "responses": ["Entre 2019 et 2021, les aides financières disponibles étaient : en 2019, une aide moyenne de 338.221130221 euros. En 2021, une aide moyenne de 381.719512195 euros."
+           "responses": ["Entre 2019 et 2021, les aides financières disponibles étaient : en 2019, il y avait 170 dossiers déposés, 147 dossiers acceptés, avec un budget de 52693 euros et une aide moyenne de 358.455782313 euros. En 2020, il y avait 430 dossiers déposés, 407 dossiers acceptés, avec un budget de 137656 euros et une aide moyenne de 338.221130221 euros. En 2021, il y avait 92 dossiers déposés, 82 dossiers acceptés, avec un budget de 31301 euros et une aide moyenne de 381.719512195 euros."
               ]
                 },{
   "tag": "associationInfoEvry",
@@ -245,20 +290,51 @@
   "responses": [
     "L'association AIESEC située à Evry-Courcouronnes dans le code postal 91000 Boulevard François Mitterrand 23, présidée par Lorine NZUZI MAKENGI, a pour objectif d’offrir aux jeunes la possibilité de développer leur leadership à travers des opportunités de stage à l’étranger et des expériences de volontariat. Vous pouvez en savoir plus sur leur site web : Non ou les suivre sur leurs réseaux sociaux : https://www.facebook.com/aiesec.france."
   ]
-},{
-  "tag": "chiffresRecherche",
-  "patterns": [
-    "Quels sont les chiffres clés pour la recherche à l'université ?",
-    "Combien de laboratoires y a-t-il à l'université ?",
-    "Combien de doctorants sont inscrits à l'université ?",
-    "Combien d'écoles doctorales y a-t-il à l'université ?"
-  ],
-  "responses": [
-    "Pour le thème 'Recherche', il y a 19 laboratoires à l'université.",
-    "Pour le thème 'Recherche', il y a 240 doctorants inscrits pour l'année 2021/2022.",
-    "Pour le thème 'Recherche', il y a 9 écoles doctorales."
-  ]
-},{
+},
+  {
+    "tag": "laboratoiresUniversité",
+    "patterns": [
+      "Combien de laboratoires y a-t-il à l'université ?",
+      "Quel est le total de laboratoires à l'université "
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 19 laboratoires à l'université."
+    ]
+  },
+  {
+    "tag": "doctorantsUniversité",
+    "patterns": [
+      "Combien de doctorants sont inscrits à l'université ?",
+      "Quel est le total de laboratoires présents à l'université ?",
+      "Combien de laboratoires sont présents à l'université ?"
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 240 doctorants inscrits pour l'année 2021/2022."
+    ]
+  },
+  {
+    "tag": "ecolesDoctoralesUniversité",
+    "patterns": [
+      "Combien d'écoles doctorales y a-t-il à l'université ?",
+      "Combien l'université compte-t-elle d'écoles doctorales ?",
+      "Quel est le total d'écoles doctorales à l'université ?"
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 9 écoles doctorales."
+    ]
+  },
+  {
+    "tag": "chiffresRecherche",
+    "patterns": [
+      "Quels sont les chiffres clés pour la recherche à l'université ?"
+    ],
+    "responses": [
+      "Pour le thème 'Recherche', il y a 19 laboratoires à l'université.",
+      "Pour le thème 'Recherche', il y a 240 doctorants inscrits pour l'année 2021/2022.",
+      "Pour le thème 'Recherche', il y a 9 écoles doctorales."
+    ]
+  }
+,{
   "tag": "chiffresPersonnel",
   "patterns": [
     "Quels sont les chiffres clés pour le personnel à l'université ?",
@@ -289,20 +365,52 @@
     "Pour le thème 'Vie du campus', il y a 45 disciplines sportives proposées.",
     "Pour le thème 'Vie du campus', il y a 25 associations étudiantes."
   ]
-},{
-  "tag": "chiffresEtudiants",
-  "patterns": [
-    "Quels sont les chiffres clés pour les étudiants à l'université ?",
-    "Combien de formations y a-t-il à l'université ?",
-    "Combien d'étudiants y a-t-il à l'université ?",
-    "Combien de composantes y a-t-il à l'université ?"
-  ],
-  "responses": [
-    "Pour le thème 'Étudiants', il y a 160 formations.",
-    "Pour le thème 'Étudiants', il y a 11337 étudiants pour l'année 2021/2022.",
-    "Pour le thème 'Étudiants', il y a 6 composantes (dont 1 IUT)."
-  ]
-},{
+  },{
+      "tag": "formationsUniversité",
+      "patterns": [
+        "Combien de formations y a-t-il à l'université ?",
+        "Quel est le nombre de programmes d'études à l'université ?",
+        "Pouvez-vous me dire combien il y a de formations à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 160 formations."
+      ]
+    },
+    {
+      "tag": "nombreEtudiantsUniversité",
+      "patterns": [
+        "Combien d'étudiants y a-t-il à l'université ?",
+        "Quel est le nombre total d'étudiants à l'université ?",
+        "Pouvez-vous indiquer combien d'étudiants sont inscrits à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 11337 étudiants pour l'année 2021/2022."
+      ]
+    },
+    {
+      "tag": "composantesUniversité",
+      "patterns": [
+        "Combien de composantes y a-t-il à l'université ?",
+        "Quel est le nombre de facultés et départements à l'université ?",
+        "Pouvez-vous me dire combien il y a de composantes à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 6 composantes (dont 1 IUT)."
+      ]
+    },
+    {
+      "tag": "chiffresEtudiants",
+      "patterns": [
+        "Quels sont les chiffres clés pour les étudiants à l'université ?",
+        "Quelles sont les statistiques principales concernant les étudiants à l'université ?",
+        "Pouvez-vous résumer les données importantes sur les étudiants à l'université ?"
+      ],
+      "responses": [
+        "Pour le thème 'Étudiants', il y a 160 formations.",
+        "Pour le thème 'Étudiants', il y a 11337 étudiants pour l'année 2021/2022.",
+        "Pour le thème 'Étudiants', il y a 6 composantes (dont 1 IUT)."
+      ]
+    },{
   "tag": "chiffresBibliotheque",
   "patterns": [
     "Quels sont les chiffres clés pour la bibliothèque universitaire ?",

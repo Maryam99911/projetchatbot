@@ -13,6 +13,7 @@ import random
 import nltk
 import sys
 import logging
+import speech_recognition as sr
 
 sys.stdout.reconfigure(encoding='utf-8')
 logging.basicConfig(level=logging.DEBUG)
@@ -27,13 +28,11 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:4200"],  # Autoriser que le chemin localhost:4200
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "Authorization"],
 )
 
-
 stemmer = LancasterStemmer()
-
 
 # Load the intents file
 with open("data1.json", encoding='utf-8') as file:
@@ -99,13 +98,10 @@ model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(output[0]), activation='softmax'))
 
-
 sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=['accuracy'])
 
-
-
-model.fit(training, output, epochs=500, batch_size=5, verbose=1)
+model.fit(training, output, epochs=20000, batch_size=5, verbose=1)
 model.save("chatbot_model.h5")
 
 
@@ -119,8 +115,10 @@ def bag_of_words(s, words):
                 bag[i] = 1
     return np.array(bag)
 
+
 class QuestionRequest(BaseModel):
     question: str
+
 
 def chat(question: str) -> str:
     try:
@@ -146,6 +144,8 @@ async def ask_question(request: QuestionRequest):
     answer = chat(question)
     return {"answer": answer}
 
+
 if __name__ == '__main__':
     import uvicorn
+
     uvicorn.run(app, host='127.0.0.1', port=8000)
