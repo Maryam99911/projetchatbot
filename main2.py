@@ -1,13 +1,40 @@
-import json
-import random
-import numpy as np
-import nltk
-from nltk.stem import LancasterStemmer
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
+
 from tensorflow.keras.optimizers import SGD
-import pickle
 from tensorflow.keras.optimizers import Adam
+from fastapi import FastAPI, HTTPException
+from keras.src.optimizers import SGD
+from pydantic import BaseModel
+import numpy as np
+import json
+from fastapi.middleware.cors import CORSMiddleware
+from nltk.stem import LancasterStemmer
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.optimizers import Adam
+import pickle
+import random
+import nltk
+import sys
+import logging
+import speech_recognition as sr
+
+sys.stdout.reconfigure(encoding='utf-8')
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4200"],  # Autoriser que le chemin localhost:4200
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "Authorization"],
+)
+
 
 stemmer = LancasterStemmer()
 
@@ -97,15 +124,13 @@ def bag_of_words(s, words):
                 bag[i] = 1
     return np.array(bag)
 
-# Chatting function
-def chat():
-    print("Commencez à discuter avec le bot (tapez 'quitter' pour faire une pause café)!")
-    while True:
-        inp = input("You: ")
-        if inp.lower() == "quit":
-            break
 
-        results = model.predict(np.array([bag_of_words(inp, words)]))[0]
+class QuestionRequest(BaseModel):
+    question: str
+
+def chat(question: str) -> str:
+    try:
+        results = model.predict(np.array([bag_of_words(question, words)]))[0]
         results_index = np.argmax(results)
         tag = labels[results_index]
 
@@ -113,8 +138,23 @@ def chat():
             for tg in data["intents"]:
                 if tg['tag'] == tag:
                     responses = tg['responses']
-            print(random.choice(responses))
+            return random.choice(responses)
         else:
-            print("Je n'ai pas compris, essayez encore une fois avec une touche de magie !")
+            return "Je n'ai pas compris, essayez encore une fois avec une touche de magie !"
+    except Exception as e:
+        logger.error(f"Error processing request: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
-chat()
+
+@app.post("/ask")
+async def ask_question(request: QuestionRequest):
+    question = request.question
+    answer = chat(question)
+    return {"answer": answer}
+
+
+
+if __name__ == '__main__':
+    import uvicorn
+
+    uvicorn.run(app, host='127.0.0.1', port=8000)
